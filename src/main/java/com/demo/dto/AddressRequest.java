@@ -1,0 +1,24 @@
+package com.demo.dto;
+
+import com.demo.company.entity.Address;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+import java.io.Serializable;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class AddressRequest implements Serializable {
+
+	private String addressName;
+	private String address;
+	private String city;
+
+}
